@@ -51,7 +51,7 @@ public abstract class BasePage {
         try {
             return waitForVisible(locator).isDisplayed();
         } catch (Exception e) {
-            return false;
+            return false; 
         }
     }
 }
