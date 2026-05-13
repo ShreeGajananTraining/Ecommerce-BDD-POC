@@ -18,6 +18,7 @@ public class LoginSteps {
         loginPage.navigateToLoginPage();
         Assert.assertTrue(loginPage.isLoginPageDisplayed(),
                 "Login page is not displayed");
+        System.out.println();
     }
 
     @Given("the user is logged in as {string} with password {string}")
@@ -58,5 +59,6 @@ public class LoginSteps {
         String actual = loginPage.getErrorMessage();
         Assert.assertTrue(actual.toLowerCase().contains(expected.toLowerCase()),
                 "Expected error to contain [" + expected + "] but was [" + actual + "]");
+        
     }
 }
